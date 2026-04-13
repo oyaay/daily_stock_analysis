@@ -27,7 +27,7 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ fromJSON(env.ANALYSIS_TIMEOUT_MINUTES || vars.ANALYSIS_TIMEOUT_MINUTES || '30') }}
+    timeout-minutes: ${{ fromJSON(vars.ANALYSIS_TIMEOUT_MINUTES || '30') }}
 
     steps:
       - name: 随机延迟
